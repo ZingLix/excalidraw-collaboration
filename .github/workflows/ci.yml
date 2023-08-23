@@ -22,6 +22,7 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
           
     - name: build
-      run: make patch images
-        |  make push-images
+      run: |
+        make patch images
+        make push-images
 
