@@ -23,6 +23,7 @@ jobs:
           
     - name: build
       run: |
+        git submodule update --init --recursive
         make patch images
         make push-images
 
